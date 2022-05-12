@@ -9,6 +9,7 @@ Bearer token based
 ## Installation
 
 - Git Clone
+- Setup .env
 - Composer update
 - php artisan serve
 
