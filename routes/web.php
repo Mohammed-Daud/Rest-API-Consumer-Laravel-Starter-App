@@ -16,10 +16,10 @@ use App\Http\Controllers\FeedbackController;
 */
 
 Route::get('/', [AuthController::class,'login'])->name('login');
-Route::get('/logout', [AuthController::class,'logout'])->name('logout');
 
 Route::middleware(['token.check'])->group(function(){
-
+    
     Route::resource('feedback', FeedbackController::class);
+    Route::get('/logout', [AuthController::class,'logout'])->name('logout');
 
 });
